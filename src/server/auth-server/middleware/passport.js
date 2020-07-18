@@ -2,8 +2,8 @@
 import passport from 'passport';
 import passportJwt from 'passport-jwt';
 import LocalStrategy from 'passport-local';
-import config from './contollers/config';
-import User from './models/user';
+import config from '../contollers/config';
+import User from '../models/user';
 
 const JwtStrategy = passportJwt.Strategy;
 const { ExtractJwt } = passportJwt;
@@ -64,3 +64,5 @@ const localLogin = new LocalStrategy(
   },
 );
 passport.use(localLogin);
+
+export default passport;

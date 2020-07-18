@@ -9,7 +9,7 @@ import flushChunks from 'webpack-flush-chunks';
 import serialize from 'serialize-javascript';
 import Routes, { routes } from '../App/Routes';
 
-export default ({ clientStats }) => async (req, res) => {
+export default ({ clientStats }) => (req, res) => {
   const { store } = req;
 
   const routesApp = matchRoutes(routes, req.path);
