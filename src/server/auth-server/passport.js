@@ -64,3 +64,5 @@ const localLogin = new LocalStrategy(
   },
 );
 passport.use(localLogin);
+
+export default passport;
